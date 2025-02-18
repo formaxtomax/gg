@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيارات اللعبة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبًا بك في لعبة الألغاز</h1>
+
+        <div id="create-or-join">
+            <h2>اختر خيارك:</h2>
+            <button id="create-game">إنشاء لعبة جديدة</button>
+            <button id="join-game">الانضمام إلى لعبة موجودة</button>
+        </div>
+
+        <div id="game-setup" class="hidden">
+            <h2 id="setup-title">إعداد اللعبة</h2>
+            <label for="game-name">اسم اللعبة:</label>
+            <input type="text" id="game-name" placeholder="أدخل اسم اللعبة">
+            <button id="start-new-game">ابدأ اللعبة</button>
+
+            <h2>أو</h2>
+
+            <label for="join-game-id">معرف اللعبة:</label>
+            <input type="text" id="join-game-id" placeholder="أدخل معرف اللعبة">
+            <button id="join-existing-game">انضم إلى اللعبة</button>
+        </div>
+
+        <div id="game-section" class="hidden">
+            <h2 id="host-message">الـHost: انتظروا قليلاً... اللعبة ستبدأ الآن!</h2>
+            <div id="puzzle-image"></div>
+            <input type="text" id="answer-box" placeholder="أدخل الإجابة هنا">
+            <button id="submit-answer">إرسال الإجابة</button>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="game-setup.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
